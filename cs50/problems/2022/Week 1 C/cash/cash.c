@@ -3,11 +3,10 @@
 int get_cents(void)
 {
     int cents;
-    do
-    {
-        printf("Cents Owed: ");
-        scanf("%i", cents);
-    } while (cents < 0);
+
+    scanf("%i", cents);
+    if (cents < 0)
+        get_cents();
     return (cents);
 }
 
@@ -67,6 +66,7 @@ int main(void)
 {
 
     //Ask how many cents the customer is owed
+    printf("Cents Owed: ");
     int cents = get_cents();
 
     //Calculate the number of quarters to give the customer

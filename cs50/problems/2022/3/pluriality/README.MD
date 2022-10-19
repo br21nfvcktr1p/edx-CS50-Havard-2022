@@ -14,5 +14,4 @@ Vote: Bob
 Vote: Alice
 
 Alice
-
 Bob

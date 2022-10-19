@@ -1,3 +1,5 @@
+Your program should behave per the examples below.
+
 $ ./plurality Alice Bob Charlie
 
 

@@ -1,6 +1,7 @@
-$ ./mario
-Height: 4
 
+$ ./mario
+
+Height: 4
    #
   ##
  ###

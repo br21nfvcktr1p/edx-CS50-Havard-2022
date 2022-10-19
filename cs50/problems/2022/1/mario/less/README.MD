@@ -1,4 +1,5 @@
 $ ./mario
+
 Height: 4
 
        #

@@ -39,8 +39,8 @@ int ft_compute_score(char *word)
 
 int main(void)
 {
-    char *word1;
-    char *word2;
+    char word2[100]; //Allocating Memory For Word2
+    char word1[100]; //Allocating Memory For Word1
     int score1;
     int score2;
     int i;
@@ -51,8 +51,8 @@ int main(void)
     printf("Player 2: ");
     scanf("%s", &word2);
     //Scoreboth words
-    score1 = ft_compute_score(word1);
     score2 = ft_compute_score(word2);
+    score1 = ft_compute_score(word1);
     //Print Winner
     if (score1 > score2)
         printf("Player 1 Wins!");

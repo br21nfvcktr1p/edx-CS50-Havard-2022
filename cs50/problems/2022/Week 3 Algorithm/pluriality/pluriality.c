@@ -27,7 +27,10 @@ int ft_vote(char *name)
     while (i < candidate_count)
     {
         if (strcmp(name, candidates[i].name) == 0)
+        {
             candidates[i].votes++;
+            return (1);
+        }
         i++;
     }
     return (0);
@@ -43,7 +46,8 @@ void    ft_print_winner()
     maxvotes = 0;
     while(i < candidate_count)
     {
-        maxvotes = candidates[i].votes; //Defining Max Votes To Candidates Votes
+        if (candidates[i].votes > maxvotes)
+            maxvotes = candidates[i].votes; //Defining Max Votes To Candidates Votes
         i++;
     }
     i = 0;
@@ -67,7 +71,7 @@ int main(int argc, char *argv[])
         printf("Usage: pluriality[candidate ..]\n");
         return (1);
     }
-
+    //Populate Array Of Candidates
     candidate_count = argc - 1;
     if (candidate_count > MAX) //If Is More Than Maximum Candidate
     {
@@ -83,14 +87,13 @@ int main(int argc, char *argv[])
     i = 0;
     printf("Numbers Of Vote: ");
     scanf("%i", &voter_count); //Storing Nb Of Vote
-  
     while (i < voter_count)
     {
         printf("Vote: ");
         scanf("%s", &name); //Storing Vote
-        if (ft_vote(name)) //If Vote Name Is Invalid Print Error
+        if (!ft_vote(name))
             printf("Invalid vote.\n"); 
         i++;
     }
-    ft_print_winner(); //Print Winners
+    ft_print_winner();
 }

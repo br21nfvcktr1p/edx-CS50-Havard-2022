@@ -63,7 +63,6 @@ int calculate_pennies(int cents)
     return (pennies);
 }
 
-
 int main(void)
 {
 

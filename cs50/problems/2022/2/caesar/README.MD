@@ -7,4 +7,5 @@ Here are a few examples of how the program might work. For example, if the user 
  
  
 plaintext:  hello, world
+
 ciphertext: uryyb, jbeyq

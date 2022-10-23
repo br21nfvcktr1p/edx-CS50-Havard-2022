@@ -1,4 +1,6 @@
 # AMEX card=378282246310005
+# VISA card=4012888888881881
+# MASTERCARD=5105105105105100
 while True:
     print("Card: ")
     lenght = 0

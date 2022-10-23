@@ -4,7 +4,7 @@ float get_cents(void)
 {
     float cents;
     printf("Cents Owed: ");
-    scanf("%f", cents);
+    scanf("%f", &cents);
     if (cents < 0)
         get_cents();
     return (cents);

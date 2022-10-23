@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-int get_cents(void)
+float get_cents(void)
 {
-    int cents;
-
-    scanf("%i", cents);
+    float cents;
+    printf("Cents Owed: ");
+    scanf("%f", cents);
     if (cents < 0)
         get_cents();
     return (cents);
 }
 
-int calculate_quarters(int cents)
+float calculate_quarters(float cents)
 {
-    int quarters;
+    float quarters;
 
     quarters = 0;
     while (cents >= 25)
@@ -23,9 +23,9 @@ int calculate_quarters(int cents)
     return (quarters);
 }
 
-int calculate_dimes(int cents)
+float calculate_dimes(float cents)
 {
-    int dimes;
+    float dimes;
 
     dimes = 0;
     while (cents >= 10)
@@ -36,9 +36,9 @@ int calculate_dimes(int cents)
     return (dimes);
 }
 
-int calculate_nickels(int cents)
+float calculate_nickels(float cents)
 {
-    int nickels;
+    float nickels;
 
     nickels = 0;
     while (cents >= 5)
@@ -49,9 +49,9 @@ int calculate_nickels(int cents)
     return (nickels);
 }
 
-int calculate_pennies(int cents)
+float calculate_pennies(float cents)
 {
-    int pennies;
+    float pennies;
 
     pennies = 0;
     while (cents >= 1)
@@ -66,28 +66,27 @@ int main(void)
 {
 
     //Ask how many cents the customer is owed
-    printf("Cents Owed: ");
-    int cents = get_cents();
+    float cents = get_cents();
 
     //Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
+    float quarters = calculate_quarters(cents);
     cents -= (quarters * 25);
 
     //Calculate the number of dimes to give the customer
-    int dimes = calculate_dimes(cents);
+    float dimes = calculate_dimes(cents);
     cents -= (dimes * 10);
 
     //Calculate the number of nickels to give the customer
-    int nickels = calculate_nickels(cents);
+    float nickels = calculate_nickels(cents);
     cents -= (nickels * 5);
 
     //Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents);
+    float pennies = calculate_pennies(cents);
     cents -= (pennies * 1);
 
     //Sum Coins
-    int coins = quarters + dimes + nickels + pennies;
+    float coins = quarters + dimes + nickels + pennies;
 
     //Print Total Sum To Give To Customer
-    printf("%i\n", coins);
+    printf("%.0f\n", coins);
 }

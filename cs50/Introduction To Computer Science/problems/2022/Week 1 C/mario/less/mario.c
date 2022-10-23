@@ -32,11 +32,8 @@ int    ft_height_nb()
     int nb;
     printf("Height: ");
     scanf("%i", &nb); //Stores Value Inputed
-    if (nb < 0)
-    {
-        printf("\n"); //Newline for Height Prompt
+   if (nb <= 0 || nb > 8)
         return (ft_heigh_nb()); //Recall Height To Restart
-    }
     return (nb);   //Returns nb if not NEGATIVE;
 }
 

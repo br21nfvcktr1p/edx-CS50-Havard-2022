@@ -1,8 +1,8 @@
 while True:
     print("Change Owed: ")
-    # Take Input Dollars From User
+    # Take Input Nb (Ex: %0.Nb)
     dollars = input()
-    # Type Cast Dollars Into float
+    # Type Cast Nb Into float
     dollars = float(dollars)
     if dollars >= 0:
         break   
@@ -28,6 +28,3 @@ while cents >= 1:
     coins += 1
 
 print(coins)
-
-
-

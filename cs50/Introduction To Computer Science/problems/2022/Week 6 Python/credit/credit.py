@@ -1,4 +1,4 @@
-#AMEX card=378282246310005
+# AMEX card=378282246310005
 while True:
     print("Card: ")
     lenght = 0
@@ -25,17 +25,17 @@ master = Number_CC
 amex = Number_CC
 length = len(str(Number_CC))
 
-#Identify if card is visa
+# Identify if card is VISA
 while visa >= 10:
     visa = int(visa / 10)
-#Identify if card is amex
+# Identify if card is AMEX
 while amex >= 10**13:
     amex = int(amex / 10**13)
-#Identify if card is mastercard
+# Identify if card is MASTERCARD
 while master >= 10**14:
     master = int(master / 10**14)
 
-#Print results
+# Print results
 if luhn_checksum(Number_CC) == 0:
     if visa == 4 and (length == 13 or length == 16):
             print("VISA")

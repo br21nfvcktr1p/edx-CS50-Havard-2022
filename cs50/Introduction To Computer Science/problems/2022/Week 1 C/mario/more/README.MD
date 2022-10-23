@@ -1,4 +1,4 @@
-Here’s how the program might work if the user inputs 4 when prompted:
+Height must be minimum 1 & maximum 8! Otherwise Reprompt for input.
 
 $ ./mario
 

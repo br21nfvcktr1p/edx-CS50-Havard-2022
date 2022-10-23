@@ -19,12 +19,11 @@ def luhn_checksum(Number_CC):
     for d in even_digits:
         checksum += sum(digits_of(d*2))
     return checksum % 10
-
+# Define
 visa = Number_CC
 master = Number_CC
 amex = Number_CC
 length = len(str(Number_CC))
-
 # Identify if card is VISA
 while visa >= 10:
     visa = int(visa / 10)
@@ -34,7 +33,6 @@ while amex >= 10**13:
 # Identify if card is MASTERCARD
 while master >= 10**14:
     master = int(master / 10**14)
-
 # Print results
 if luhn_checksum(Number_CC) == 0:
     if visa == 4 and (length == 13 or length == 16):
